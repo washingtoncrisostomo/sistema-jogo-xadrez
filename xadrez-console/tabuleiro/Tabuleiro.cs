@@ -2,9 +2,10 @@
 {
     class Tabuleiro
     {
+
         public int linhas { get; set; }
         public int colunas { get; set; }
-        private Peca[,] pecas; 
+        private Peca[,] pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
@@ -41,7 +42,7 @@
 
         public Peca retirarPeca(Posicao pos)
         {
-            if(peca(pos) == null)
+            if (peca(pos) == null)
             {
                 return null;
             }
@@ -53,7 +54,7 @@
 
         public bool posicaoValida(Posicao pos)
         {
-            if(pos.linha<0 || pos.linha>=linhas || pos.coluna<0 || pos.coluna >= colunas)
+            if (pos.linha < 0 || pos.linha >= linhas || pos.coluna < 0 || pos.coluna >= colunas)
             {
                 return false;
             }
